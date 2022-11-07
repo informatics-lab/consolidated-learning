@@ -10,6 +10,11 @@ BARCODE_DATABASE = {
     "23456": 12.50,
 }
 
+ERROR_DATABASE = {
+    "" : "Error: empty barcode",
+    "99999": "Error: barcode not found"
+}
+
 
 def format_to_currency(total):
     return "$" + "{:.2f}".format(total)
@@ -18,11 +23,8 @@ def format_to_currency(total):
 def scan_barcode(input_code):
     """
     """
-    if input_code == "":
-        return "Error: empty barcode"
-
-    if input_code == "99999":
-        return "Error: barcode not found"
+    if input_code in ERROR_DATABASE.keys():
+        return ERROR_DATABASE[input_code]
 
     value = BARCODE_DATABASE[input_code]
 
