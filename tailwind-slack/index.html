@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tailwind Slack</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body class="text-white bg-gray-700 h-screen flex flex-col">
+    <nav
+      class="flex flex-row gap-2 px-2 items-center bg-purple-900 shadow pl-4 py-2 text-gray-100"
+    >
+      <div>Icon</div>
+      <div
+        class="bg-purple-800/50 flex-grow rounded-lg w-8 h-8 border border-purple-500"
+      ></div>
+      <div>Icon</div>
+      <div>Icon</div>
+    </nav>
+    <div class="flex-grow grid grid-cols-[1fr,3fr]">
+      <aside class="bg-purple-800 p-2 flex flex-col space-y-4">
+        <header class="flex flex-row justify-between items-center">
+          <h1 class="font-semibold">Informatics Lab</h1>
+          <div class="rounded-full bg-white h-9 w-9"></div>
+        </header>
+        <details open="true">
+          <summary>Channels</summary>
+
+          <ul>
+            <li># announcement</li>
+            <li># digital-twins</li>
+            <li># general</li>
+          </ul>
+        </details>
+        <details open="true">
+          <summary>Direct messages</summary>
+          <ul>
+            <li class="flex flex-row space-x-2 items-center">
+              <img src="#" /><span>Slackbot</span>
+            </li>
+            <li class="flex flex-row space-x-2 items-center">
+              <img src="#" /><span>Andy</span
+              ><span class="text-gray-300">You</span>
+            </li>
+          </ul>
+        </details>
+      </aside>
+      <main class="relative bg-white text-gray-800 p-2">
+        <header class="py-4">
+          <h2 class="text-xl font-semibold"># check-in</h2>
+        </header>
+        <div class="border-t border-b py-2">+ Add a bookmark</div>
+        <div>
+          <ul class="flex flex-col space-y-2 py-2">
+            <li class="flex flex-row items-start gap-2">
+              <img
+                src="#"
+                alt=""
+                class="mt-1 w-6 h-6 bg-gray-100 rounded shadow"
+              />
+              <div class="">
+                <div class="flex flex-row gap-4">
+                  <h3 class="font-semibold">Tom Dodds</h3>
+                  <span>9:47 AM</span>
+                </div>
+                <p>Morning WFH: Moonshot working on GNN...</p>
+              </div>
+            </li>
+            <li class="flex flex-row items-start gap-2">
+              <img
+                src="#"
+                alt=""
+                class="mt-1 w-6 h-6 bg-gray-100 rounded shadow"
+              />
+              <div class="">
+                <div class="flex flex-row gap-4">
+                  <h3 class="font-semibold">Tom Dodds</h3>
+                  <span>9:47 AM</span>
+                </div>
+                <p>Morning WFH: Moonshot working on GNN...</p>
+              </div>
+            </li>
+            <li class="flex flex-row items-start gap-2">
+              <img
+                src="#"
+                alt="#"
+                class="mt-1 w-6 h-6 bg-gray-100 rounded shadow"
+              />
+              <div class="">
+                <div class="flex flex-row gap-4">
+                  <h3 class="font-semibold">Tom Dodds</h3>
+                  <span>9:47 AM</span>
+                </div>
+                <p>Morning WFH: Moonshot working on GNN...</p>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="rounded border absolute bottom-0 left-0 right-0 mx-2 mb-1"
+          >
+            <div class="bg-gray-100 px-2">Tools</div>
+            <div class="p-8">Text entry widget</div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
