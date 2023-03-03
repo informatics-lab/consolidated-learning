@@ -2,7 +2,14 @@
 module.exports = {
   content: ["*html", "src/**/*{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        slack: {
+          primary: "#350d36",
+          secondary: "#3F0E40",
+        },
+      },
+    },
   },
   plugins: [],
 };
