@@ -1,44 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | E-commerce product page</title>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="flex flex-col divide-y max-w-3xl m-auto">
+    <nav class="flex flex-row items-center justify-between">
+      <div class="flex flex-row items-center">
+        <div class="font-bold text-2xl tracking-wide">sneakers</div>
+        <ul class="flex flex-row space-x-8 px-12 py-8">
+          <li class="text-gray-400 text-sm">Collections</li>
+          <li class="text-gray-400 text-sm">Men</li>
+          <li class="text-gray-400 text-sm">Women</li>
+          <li class="text-gray-400 text-sm">About</li>
+          <li class="text-gray-400 text-sm">Contact</li>
+        </ul>
+      </div>
+      <div class="flex flex-row space-x-6 items-center">
+        <svg
+          class="w-5 h-4"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+            fill="#777"
+            fill-rule="nonzero"
+          />
+        </svg>
 
-  Sneaker Company
+        <div class="grid place-items-center w-9 h-9 rounded-full bg-red-200">
+          <img src="images/image-avatar.png" />
+        </div>
+      </div>
+    </nav>
+    <main class="grid gap-12 grid-cols-2 pt-16">
+      <section class="grid gap-4">
+        <div class="rounded-lg overflow-hidden">
+          <img src="./images/image-product-1.jpg" />
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+          <img
+            class="rounded-lg border-2 border-orange-500 opacity-50"
+            src="./images/image-product-1-thumbnail.jpg"
+          />
+          <img
+            class="rounded-lg"
+            src="./images/image-product-2-thumbnail.jpg"
+          />
+          <img
+            class="rounded-lg"
+            src="./images/image-product-3-thumbnail.jpg"
+          />
+          <img
+            class="rounded-lg"
+            src="./images/image-product-4-thumbnail.jpg"
+          />
+        </div>
+      </section>
+      <section class="flex flex-col space-y-4 justify-center">
+        <header>
+          <p class="text-orange-400 text-md uppercase tracking-wide">
+            Sneaker Company
+          </p>
+          <h1 class="text-3xl font-semibold">Fall Limited Edition Sneakers</h1>
+        </header>
+        <p class="text-gray-500 text-sm">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div>
+          <div>
+            <span class="text-lg font-bold">$125.00</span>
+            <span
+              class="bg-orange-50 text-orange-500 font-bold p-1 rounded text-sm"
+              >50%</span
+            >
+          </div>
+          <div class="text-gray-400 line-through">$250.00</div>
+        </div>
+        <div class="grid grid-cols-[1fr,2fr] gap-2">
+          <div
+            class="flex flex-row items-center justify-between bg-gray-200 py-2 rounded"
+          >
+            <button class="px-2 text-orange-500 font-bold">-</button
+            ><span class="font-bold text-sm">0</span
+            ><button class="px-2 text-orange-500 font-bold">+</button>
+          </div>
+          <button
+            class="flex items-center justify-center space-x-2 font-semibold text-sm bg-orange-500 py-3 rounded text-white shadow-xl shadow-orange-300/50"
+          >
+            <svg
+              class="w-4 h-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill="white"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <span> Add to cart </span>
+          </button>
+        </div>
 
-  Fall Limited Edition Sneakers
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </section>
+    </main>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script type="module">
+      import "./style.css";
+    </script>
+  </body>
 </html>
